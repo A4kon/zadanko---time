@@ -1,5 +1,4 @@
-import { join } from 'path';
-
+//TODO: Refactore migration making process
 const DatabaseConfig = () => ({
   type: 'mysql',
   host: process.env.DB_HOST || 'localhost',
@@ -12,7 +11,7 @@ const DatabaseConfig = () => ({
   migrationsTableName: 'migrations',
   migrations: ['dist/migrations/*.js'],
   cli: {
-    migrationsDir: 'dist/migrations',
+    migrationsDir: 'src/migrations',
   },
 });
 

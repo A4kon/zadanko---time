@@ -1,25 +1,34 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { IsOptional, IsNumber, IsString, IsNotEmpty } from 'class-validator';
 
 export class StartTrackingTaskDto {
   @ApiProperty()
+  @IsString()
+  @IsNotEmpty()
   taskName: string;
   @ApiProperty({
     default: 1,
   })
+  @IsNumber()
+  @IsNotEmpty()
   ownerId: number;
+  @ApiProperty({
+    default: null,
+  })
+  @IsOptional()
+  parentId: number;
+  @IsOptional()
+  startDate: string;
 }
-
-export class EndTrackingTaskDto {
+export class UpdateTaskDto {
+  @IsString()
+  @IsNotEmpty()
   @ApiProperty()
-  taskId: number;
-}
-
-export class PauseTrackingTaskDto {
-  @ApiProperty()
-  taskId: number;
-}
-
-export class ReasumeTrackingTaskDto {
-  @ApiProperty()
-  taskId: number;
+  taskName: string;
+  @IsNumber()
+  @IsNotEmpty()
+  @ApiProperty({
+    default: 1,
+  })
+  ownerId: number;
 }

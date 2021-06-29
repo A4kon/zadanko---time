@@ -32,6 +32,15 @@
 $ npm install
 ```
 
+## TODO
+
+```bash
+Write e2e tests
+Add more precise description for API
+Add custom business error handling instead of throw in service
+Create + export interfaces and enums for Promieses
+```
+
 ## Running the app
 
 ```bash
@@ -43,19 +52,10 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
 
-## Test
+# migration (firstly build app,then build migration, then run migration)
+$ npm run migrations:run
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
 ## Support
@@ -64,10 +64,14 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Author of nest - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## 3rd party Library
+
+See package.json

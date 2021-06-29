@@ -1,6 +1,5 @@
 export class TimeHelper {
-  async isDateBefore(startDate: Date, endDate: Date): Promise<boolean> {
-    console.log(startDate, endDate);
-    return true;
+  async getCurrentDateTime(): Promise<string> {
+    return new Date().toISOString().slice(0, 19).replace('T', ' ');
   }
 }

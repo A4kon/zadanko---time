@@ -5,7 +5,7 @@ export class Tracker {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ default: null })
   parentId: number;
 
   @Column()
@@ -14,10 +14,13 @@ export class Tracker {
   @Column()
   taskName: string;
 
-  @Column()
+  @Column({ default: true })
+  isActive: boolean;
+
+  @Column({ default: false })
   isEnded: boolean;
 
-  @Column()
+  @Column({ default: false })
   isReasumeAble: boolean;
 
   @Column()
